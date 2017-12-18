@@ -1,5 +1,6 @@
 <?php
 
 http_response_code(isset($_GET['status']) ? $_GET['status'] : 200);
+header('Content-Type: application/json');
 
-var_dump($_SERVER);
+echo json_encode($_SERVER, JSON_PRETTY_PRINT);
